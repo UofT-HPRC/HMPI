@@ -1,0 +1,235 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vivado/2018.2/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'tarafdar' on host 'batcomputer.arkham' (Linux_x86_64 version 4.15.0-45-generic) on Wed Mar 06 16:46:42 EST 2019
+INFO: [HLS 200-10] On os Ubuntu 16.04.2 LTS
+INFO: [HLS 200-10] In directory '/home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp'
+INFO: [HLS 200-10] Opening project '/home/tarafdar/workDir/test/galapagos/hlsBuild/adm-8k5-debug/ip/communication_bridge_tcp_mpi'.
+INFO: [HLS 200-10] Opening solution '/home/tarafdar/workDir/test/galapagos/hlsBuild/adm-8k5-debug/ip/communication_bridge_tcp_mpi/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
+INFO: [HLS 200-10] Setting target device to 'xcku115-flva1517-2-e'
+INFO: [HLS 200-10] Adding design file '/home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp' to the project
+INFO: [HLS 200-10] Analyzing design file '/home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp' ... 
+WARNING: [HLS 200-40] In file included from /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:1:
+/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_cint.h:59:2: warning: This header file cannot be used in a C++ design.  [-W#warnings]
+#warning This header file cannot be used in a C++ design. 
+ ^
+1 warning generated.\n
+WARNING: [HLS 200-41] Resource core 'AXI4Stream' on port '&from_app' is deprecated. Please use the interface directive to specify the AXI interface.
+WARNING: [HLS 200-41] Resource core 'AXI4Stream' on port '&to_app' is deprecated. Please use the interface directive to specify the AXI interface.
+WARNING: [HLS 200-41] Resource core 'AXI4Stream' on port '&from_net' is deprecated. Please use the interface directive to specify the AXI interface.
+WARNING: [HLS 200-41] Resource core 'AXI4Stream' on port '&to_net' is deprecated. Please use the interface directive to specify the AXI interface.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 365.871 ; gain = 0.168 ; free physical = 12958 ; free virtual = 57999
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 365.871 ; gain = 0.168 ; free physical = 12958 ; free virtual = 57999
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 366.184 ; gain = 0.480 ; free physical = 12950 ; free virtual = 57990
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:120: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 494.152 ; gain = 128.449 ; free physical = 12943 ; free virtual = 57984
+INFO: [XFORM 203-1101] Packing variable 'from_app.V' (/home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:345) into a 129-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'to_app.V' (/home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:346) into a 129-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'from_net.V' (/home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:347) into a 81-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'to_net.V' (/home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:348) into a 81-bit variable.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'app_to_net' (/home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:145).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'net_to_app' (/home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:54).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (/home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:228) in function 'app_to_net' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2' (/home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:294) in function 'app_to_net' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (/home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:119) in function 'net_to_app' completely.
+INFO: [XFORM 203-712] Applying dataflow to function 'communication_bridge_tcp_mpi', detected/extracted 2 process function(s): 
+	 'net_to_app'
+	 'app_to_net'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:186:5) to (/home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:206:4) in function 'app_to_net'... converting 4 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'net_to_app' (/home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:54)...7 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'app_to_net' (/home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:145)...14 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 494.152 ; gain = 128.449 ; free physical = 12911 ; free virtual = 57952
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 494.152 ; gain = 128.449 ; free physical = 12892 ; free virtual = 57933
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'communication_bridge_tcp_mpi' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'net_to_app' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'net_to_app'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+WARNING: [SCHED 204-70] Cannot meet target clock period from 'select' operation ('tmp_10_byte_counter_s') to 'select' operation ('tmp_10_2_byte_counte') (combination delay: 4.292 ns) to honor II or Latency constraint in region 'net_to_app'.
+WARNING: [SCHED 204-21] Estimated clock period (16.3265ns) exceeds the target (target clock period: 4ns, clock uncertainty: 0.5ns, effective delay budget: 3.5ns).
+WARNING: [SCHED 204-21] The critical path consists of the following:
+	'load' operation ('byte_counter_load', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:111) on static variable 'byte_counter' (0 ns)
+	'add' operation ('tmp_s', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:121) (1.49 ns)
+	'select' operation ('tmp_10_byte_counter_s', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:120) (0.44 ns)
+	'add' operation ('tmp_10_1', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:121) (1.49 ns)
+	'select' operation ('byte_counter_new_4', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:120) (0.44 ns)
+	'add' operation ('tmp_10_2', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:121) (1.49 ns)
+	'select' operation ('tmp_10_2_byte_counte', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:120) (0.44 ns)
+	'add' operation ('tmp_10_3', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:121) (1.49 ns)
+	'select' operation ('byte_counter_new_6', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:120) (0.44 ns)
+	'add' operation ('tmp_10_4', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:121) (1.49 ns)
+	'select' operation ('tmp_10_4_byte_counte', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:120) (0.44 ns)
+	'add' operation ('tmp_10_5', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:121) (1.49 ns)
+	'select' operation ('byte_counter_new_8', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:120) (0.44 ns)
+	'add' operation ('tmp_10_6', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:121) (1.49 ns)
+	'select' operation ('tmp_10_6_byte_counte', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:120) (0.44 ns)
+	'add' operation ('tmp_10_7', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:121) (1.49 ns)
+	'select' operation ('byte_counter_new_s', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:120) (0.44 ns)
+	multiplexor before 'phi' operation ('byte_counter_flag_1', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:120) with incoming values : ('byte_counter_flag_s', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:120) (0.918 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 14.68 seconds; current allocated memory: 112.486 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 112.891 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'app_to_net' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'app_to_net'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+WARNING: [SCHED 204-70] Cannot meet target clock period from 'select' operation ('tmp_32_byte_counter_s') to 'select' operation ('tmp_32_2_byte_counte') (combination delay: 4.292 ns) to honor II or Latency constraint in region 'app_to_net'.
+WARNING: [SCHED 204-21] Estimated clock period (16.548ns) exceeds the target (target clock period: 4ns, clock uncertainty: 0.5ns, effective delay budget: 3.5ns).
+WARNING: [SCHED 204-21] The critical path consists of the following:
+	'load' operation ('byte_counter_1_load', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:230) on static variable 'byte_counter_1' (0 ns)
+	'add' operation ('tmp_8', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:230) (1.49 ns)
+	'select' operation ('tmp_29_byte_counter_s', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:229) (0.44 ns)
+	'add' operation ('tmp_29_1', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:230) (1.49 ns)
+	'select' operation ('byte_counter_1_new_1', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:229) (0.44 ns)
+	'add' operation ('tmp_29_2', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:230) (1.49 ns)
+	'select' operation ('tmp_29_2_byte_counte', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:229) (0.44 ns)
+	'add' operation ('tmp_29_3', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:230) (1.49 ns)
+	'select' operation ('byte_counter_1_new_3', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:229) (0.44 ns)
+	'add' operation ('tmp_29_4', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:230) (1.49 ns)
+	'select' operation ('tmp_29_4_byte_counte', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:229) (0.44 ns)
+	'add' operation ('tmp_29_5', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:230) (1.49 ns)
+	'select' operation ('byte_counter_1_new_5', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:229) (0.44 ns)
+	'add' operation ('tmp_29_6', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:230) (1.49 ns)
+	'select' operation ('tmp_29_6_byte_counte', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:229) (0.44 ns)
+	'add' operation ('tmp_29_7', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:230) (1.49 ns)
+	'select' operation ('byte_counter_1_new_7', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:229) (0.44 ns)
+	'icmp' operation ('tmp_9', /home/tarafdar/workDir/test/galapagos/HUMboldt/HLS_lib/communication_bridge_tcp/communication_bridge_tcp_mpi.cpp:232) (1.14 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.22 seconds; current allocated memory: 113.851 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 114.773 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'communication_bridge_tcp_mpi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 114.934 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 115.128 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'net_to_app' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'nta_state_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'expected_bytes' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'byte_counter' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'dest_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'id_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'user_V' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'net_to_app'.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 116.032 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'app_to_net' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'atn_state_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'app_packet_in_data_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'remaining_size' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'extraPayload_data_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'byte_counter_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'last_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'currPayloadIn_dest_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'currPayloadIn_last_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'bytes_from_prev_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'keep_from_prev_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'has_from_prev' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'app_packet_in_last_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'app_packet_in_dest_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'app_packet_in_keep_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'extraPayload_dest_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'extraPayload_keep_V' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'app_to_net'.
+INFO: [HLS 200-111]  Elapsed time: 0.31 seconds; current allocated memory: 119.224 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'communication_bridge_tcp_mpi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'communication_bridge_tcp_mpi/from_app_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'communication_bridge_tcp_mpi/to_app_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'communication_bridge_tcp_mpi/from_net_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'communication_bridge_tcp_mpi/to_net_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'communication_bridge_tcp_mpi' to 'ap_ctrl_none'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'communication_bridge_tcp_mpi'.
+INFO: [HLS 200-111]  Elapsed time: 0.36 seconds; current allocated memory: 123.018 MB.
+INFO: [IMPL 213-200] Port 'from_app_V.data' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 'from_app_V.dest' is mapped to 'TDEST' by default.
+INFO: [IMPL 213-200] Port 'from_app_V.last' is mapped to 'TLAST' by default.
+INFO: [IMPL 213-200] Port 'from_app_V.keep' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 'from_app_V.id' is mapped to 'TID' by default.
+INFO: [IMPL 213-200] Port 'from_app_V.user' is mapped to 'TUSER' by default.
+INFO: [IMPL 213-200] Port 'from_net_V.data' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 'from_net_V.dest' is mapped to 'TDEST' by default.
+INFO: [IMPL 213-200] Port 'from_net_V.keep' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 'from_net_V.last' is mapped to 'TLAST' by default.
+INFO: [IMPL 213-200] Port 'to_app_V.data' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 'to_app_V.dest' is mapped to 'TDEST' by default.
+INFO: [IMPL 213-200] Port 'to_app_V.last' is mapped to 'TLAST' by default.
+INFO: [IMPL 213-200] Port 'to_app_V.keep' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 'to_app_V.id' is mapped to 'TID' by default.
+INFO: [IMPL 213-200] Port 'to_app_V.user' is mapped to 'TUSER' by default.
+INFO: [IMPL 213-200] Port 'to_net_V.data' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 'to_net_V.dest' is mapped to 'TDEST' by default.
+INFO: [IMPL 213-200] Port 'to_net_V.keep' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 'to_net_V.last' is mapped to 'TLAST' by default.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 557.703 ; gain = 192.000 ; free physical = 12874 ; free virtual = 57915
+INFO: [SYSC 207-301] Generating SystemC RTL for communication_bridge_tcp_mpi.
+INFO: [VHDL 208-304] Generating VHDL RTL for communication_bridge_tcp_mpi.
+INFO: [VLOG 209-307] Generating Verilog RTL for communication_bridge_tcp_mpi.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [IMPL 213-200] Port 'from_app_V.data' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 'from_app_V.dest' is mapped to 'TDEST' by default.
+INFO: [IMPL 213-200] Port 'from_app_V.last' is mapped to 'TLAST' by default.
+INFO: [IMPL 213-200] Port 'from_app_V.keep' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 'from_app_V.id' is mapped to 'TID' by default.
+INFO: [IMPL 213-200] Port 'from_app_V.user' is mapped to 'TUSER' by default.
+INFO: [IMPL 213-200] Port 'from_net_V.data' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 'from_net_V.dest' is mapped to 'TDEST' by default.
+INFO: [IMPL 213-200] Port 'from_net_V.keep' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 'from_net_V.last' is mapped to 'TLAST' by default.
+INFO: [IMPL 213-200] Port 'to_app_V.data' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 'to_app_V.dest' is mapped to 'TDEST' by default.
+INFO: [IMPL 213-200] Port 'to_app_V.last' is mapped to 'TLAST' by default.
+INFO: [IMPL 213-200] Port 'to_app_V.keep' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 'to_app_V.id' is mapped to 'TID' by default.
+INFO: [IMPL 213-200] Port 'to_app_V.user' is mapped to 'TUSER' by default.
+INFO: [IMPL 213-200] Port 'to_net_V.data' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 'to_net_V.dest' is mapped to 'TDEST' by default.
+INFO: [IMPL 213-200] Port 'to_net_V.keep' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 'to_net_V.last' is mapped to 'TLAST' by default.
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Wed Mar  6 16:47:07 2019...
+INFO: [HLS 200-112] Total elapsed time: 25.25 seconds; peak allocated memory: 123.018 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Wed Mar  6 16:47:07 2019...
