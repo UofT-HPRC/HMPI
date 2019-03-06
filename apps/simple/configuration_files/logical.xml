@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cluster>
+    <kernel> kmeans_1
+		<num> 1 </num>
+        <rep> 1 </rep>
+        <clk> aclk </clk>
+        <aresetn> aresetn </aresetn>
+        <id_port> id_V </id_port>
+        <s_axis>
+            <scope> global </scope>
+            <name> stream_in_V </name>
+            <debug/>
+        </s_axis>
+        <m_axis>
+            <scope> global </scope>
+            <name> stream_out_V </name>
+            <debug/>
+        </m_axis>
+        <const>
+            <name> mpi_size_V </name>
+            <val> 4 </val>
+            <width> 16 </width>
+        </const>
+    </kernel>
+    <kernel> kmeans
+		<num> 2 </num>
+        <rep> 3 </rep>
+        <clk> aclk </clk>
+        <aresetn> aresetn </aresetn>
+        <id_port> id_V </id_port>
+        <s_axis>
+            <scope> global </scope>
+            <name> stream_in_V </name>
+            <debug/>
+        </s_axis>
+        <m_axis>
+            <scope> global </scope>
+            <name> stream_out_V </name>
+            <debug/>
+        </m_axis>
+        <const>
+            <name> mpi_size_V </name>
+            <val> 4 </val>
+            <width> 16 </width>
+        </const>
+    </kernel>
+	<kernel> cpu
+        <num> 0 </num>
+        <rep> 1 </rep>
+        <s_axis>
+            <scope> global </scope>
+            <name> stream_in </name>
+        </s_axis>
+        <m_axis>
+            <scope> global </scope>
+            <name> stream_out </name>
+        </m_axis>
+	</kernel>
+</cluster>
