@@ -8,6 +8,11 @@
     </node>
     <node>
         <app_bridge> 
+            <clk> aclk </clk>
+            <aresetn> aresetn </aresetn>
+            <vendor> xilinx.com </vendor>
+            <version> 1.0 </version>
+            <lib> hls </lib>
             <name> communication_bridge_eth_mpi </name> 
             <to_app> to_app_V </to_app>
             <from_app> from_app_V </from_app>
@@ -18,9 +23,6 @@
         <type> hw </type>
         <comm> eth </comm>
         <kernel> 1 </kernel>
-        <kernel> 2 </kernel>
-        <kernel> 3 </kernel>
-        <kernel> 4 </kernel>
         <mac>  fa:16:3e:55:ca:02 </mac>
         <ip> 10.1.2.101 </ip>
     </node>

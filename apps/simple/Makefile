@@ -14,7 +14,7 @@ guard-%:
 	fi
 
 
-all: sw hls guard-GALAPAGOS_PATH guard-GALAPAGOS_HLS_PATH guard-GALAPAGOS_BOARD_NAME
+all: sw hls middleware guard-GALAPAGOS_PATH guard-GALAPAGOS_HLS_PATH guard-GALAPAGOS_BOARD_NAME
 
 HUMBOLDT_PATH =  $(GALAPAGOS_PATH)/HUMboldt
 APP_PATH =  $(HUMBOLDT_PATH)/apps/$(APP)
@@ -26,12 +26,13 @@ export PROJECTNAME = $(APP)
 
 
 
-.PHONY: hls sw
+.PHONY: hls sw middleware
 
 sw:
 	$(MAKE) -C $(APP_PATH)/sw 
 
 hls:
+	make -C $(GALAPAGOS_PATH)/middleware hlsmiddleware 
 	mkdir -p $(BOARD_PATH)/ip/$(APP)
 	vivado_hls $(APP_PATH)/hls/generate_hls.tcl
 
